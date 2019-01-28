@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdminModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="information">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="email_id" />
+    </Key>
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nickname" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="email_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="gender" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="age" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone_no" Type="varchar" MaxLength="50" />
+    <Property Name="mobile_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="profession" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="profession">
+    <Key>
+      <PropertyRef Name="profession_id" />
+    </Key>
+    <Property Name="profession_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="register_user">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="email_id" />
+    </Key>
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="remarks" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Supplier_Master">
+    <Key>
+      <PropertyRef Name="Supplier_ID" />
+    </Key>
+    <Property Name="Supplier_ID" Type="int" Nullable="false" />
+    <Property Name="Supplier_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Supplier_Company" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Supplier_Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Supplier_Mobile" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Supplier_Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Supplier_City" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Supplier_Address" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AdminModelStoreContainer">
+    <EntitySet Name="information" EntityType="Self.information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="profession" EntityType="Self.profession" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="register_user" EntityType="Self.register_user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplier_Master" EntityType="Self.Supplier_Master" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

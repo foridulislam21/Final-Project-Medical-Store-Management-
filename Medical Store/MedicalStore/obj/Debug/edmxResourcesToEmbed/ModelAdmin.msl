@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AdminModelStoreContainer" CdmEntityContainer="AdminEntities">
+    <EntitySetMapping Name="information">
+      <EntityTypeMapping TypeName="AdminModel.information">
+        <MappingFragment StoreEntitySet="information">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="nickname" ColumnName="nickname" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+          <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+          <ScalarProperty Name="profession" ColumnName="profession" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="professions">
+      <EntityTypeMapping TypeName="AdminModel.profession">
+        <MappingFragment StoreEntitySet="profession">
+          <ScalarProperty Name="profession_id" ColumnName="profession_id" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="register_user">
+      <EntityTypeMapping TypeName="AdminModel.register_user">
+        <MappingFragment StoreEntitySet="register_user">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email_id" ColumnName="email_id" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supplier_Master">
+      <EntityTypeMapping TypeName="AdminModel.Supplier_Master">
+        <MappingFragment StoreEntitySet="Supplier_Master">
+          <ScalarProperty Name="Supplier_Address" ColumnName="Supplier_Address" />
+          <ScalarProperty Name="Supplier_City" ColumnName="Supplier_City" />
+          <ScalarProperty Name="Supplier_Phone" ColumnName="Supplier_Phone" />
+          <ScalarProperty Name="Supplier_Mobile" ColumnName="Supplier_Mobile" />
+          <ScalarProperty Name="Supplier_Email" ColumnName="Supplier_Email" />
+          <ScalarProperty Name="Supplier_Company" ColumnName="Supplier_Company" />
+          <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
